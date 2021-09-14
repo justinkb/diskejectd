@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.jkb.diskclaimd</string>
+	<key>Program</key>
+	<string>/usr/local/sbin/diskclaimd</string>
+	<key>StandardOutPath</key>
+	<string>/var/log/diskclaimd.out.log</string>
+	<key>StandardErrorPath</key>
+	<string>/var/log/diskclaimd.err.log</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/sbin/diskclaimd</string>
+		<string>IODeviceTree:/PCI0@0/SAT0@17/PRT0@0/PMP@0/@0:0</string>
+		<string>IODeviceTree:/PCI0@0/SAT0@17/PRT1@1/PMP@0/@0:0</string>
+		<string>IODeviceTree:/PCI0@0/SAT0@17/PRT2@2/PMP@0/@0:0</string>
+		<string>IODeviceTree:/PCI0@0/SAT0@17/PRT3@3/PMP@0/@0:0</string>
+		<string>IODeviceTree:/PCI0@0/RP21@1B,4/PXSX@0/IONVMeController/IONVMeBlockStorageDevice@1/@1:0</string>
+	</array>
+	<key>KeepAlive</key>
+	<true/>
+</dict>
+</plist>

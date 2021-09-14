@@ -1,5 +1,5 @@
-ORG  := com
-NAME := diskejectd
+ORG  := com.jkb
+NAME := diskclaimd
 PREFIX := /usr/local
 
 all: $(NAME)
@@ -8,8 +8,8 @@ $(NAME): $(NAME).c
 	$(CC) $(NAME).c -g -o $(NAME) -framework Foundation -framework DiskArbitration
 	
 clean:
-	rm -rf diskejectd.dSYM
-	rm diskejectd
+	rm -rf $(NAME).dSYM
+	rm -f $(NAME)
 
 install: $(NAME) $(ORG).$(NAME).plist
 	install -d $(PREFIX)/sbin
